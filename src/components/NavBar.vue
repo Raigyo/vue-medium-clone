@@ -1,3 +1,18 @@
+<script>
+export default {
+  computed: {
+    username() {
+      return this.$store.getters["users/username"];
+    }
+  },
+  methods: {
+    logout: function() {
+      this.$store.dispatch("users/logoutUser");
+    }
+  }
+};
+</script>
+
 <template>
   <nav class="navbar navbar-dark bg-inverse">
     <div class="container">
@@ -23,10 +38,17 @@
             >Sign In</router-link
           >
         </li>
-        <li class="nav-item">
-          <router-link class="nav-link" :to="{ name: 'Register' }"
-            >Register</router-link
-          >
+        <li v-if="username == null" class="nav-item">
+          <router-link class="nav-link" to="/register"> Register </router-link>
+        </li>
+        <li v-if="username" class="nav-item">
+          <router-link class="nav-link" :to="`/@${username}`">
+            {{ username }}
+          </router-link>
+        </li>
+        <!-- We are going to render the logout only when the user is logged -->
+        <li v-if="username" class="nav-item" @click="logout">
+          <router-link class="nav-link" to="/"> Log Out </router-link>
         </li>
       </ul>
     </div>
