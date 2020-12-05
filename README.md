@@ -1,4 +1,12 @@
-# medium-clone
+# Vue - Medium clone
+
+December 2020
+
+> 🔨  Creating A Medium clone using Vue 3.
+>
+> From Kriss' devblog [Building Medium Clone with Vue 3](https://kriss.io/building-medium-clone-with-vue-3/)
+
+* * *
 
 ## Project setup
 ```
