@@ -25,7 +25,7 @@ footer .attribution {
   vertical-align: middle;
   margin-left: 10px;
   font-size: 0.9rem;
-  color: #FFF;
+  color: #fff;
   font-weight: 300;
 }
 </style>

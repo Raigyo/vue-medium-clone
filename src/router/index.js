@@ -17,7 +17,7 @@ const routes = [
     path: "/register",
     name: "Register",
     component: Register
-  },
+  }
 ];
 const router = createRouter({
   history: createWebHashHistory(),

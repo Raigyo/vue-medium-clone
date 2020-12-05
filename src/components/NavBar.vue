@@ -4,7 +4,9 @@
       <a class="navbar-brand" href="index.html">Medium Clone</a>
       <ul class="nav navbar-nav pull-xs-right">
         <li class="nav-item">
-          <router-link class="nav-link" :to="{name : 'Home'}">Home</router-link>
+          <router-link class="nav-link" :to="{ name: 'Home' }"
+            >Home</router-link
+          >
         </li>
         <li class="nav-item">
           <a class="nav-link" href="">
@@ -17,10 +19,14 @@
           </a>
         </li>
         <li class="nav-item">
-          <router-link class="nav-link" :to="{name : 'Login'}">Sign In</router-link>
+          <router-link class="nav-link" :to="{ name: 'Login' }"
+            >Sign In</router-link
+          >
         </li>
         <li class="nav-item">
-          <router-link class="nav-link" :to="{name : 'Register'}">Register</router-link>
+          <router-link class="nav-link" :to="{ name: 'Register' }"
+            >Register</router-link
+          >
         </li>
       </ul>
     </div>
