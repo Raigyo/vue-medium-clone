@@ -20,7 +20,7 @@
               </li>
             </ul>
           </div>
-
+          <!-- articles preview -->
           <div class="article-preview">
             <div class="article-meta">
               <a href="profile.html"
@@ -40,7 +40,7 @@
               <span>Read more...</span>
             </a>
           </div>
-
+          <!-- articles preview -->
           <div class="article-preview">
             <div class="article-meta">
               <a href="profile.html"
@@ -60,8 +60,28 @@
               <span>Read more...</span>
             </a>
           </div>
+
         </div>
-      </div>
+        <!-- Sidebar -->
+        <div class="col-md-3">
+          <div class="sidebar">
+            <p><strong>Popular Tags</strong></p>
+            <div class="tag-list">
+              <a href="" class="tag-pill tag-default">mobiledevelopment</a>
+              <a href="" class="tag-pill tag-default">react</a>
+              <a href="" class="tag-pill tag-default">reactnative</a>
+              <a href="" class="tag-pill tag-default">vue</a>
+              <a href="" class="tag-pill tag-default">sql</a>
+              <a href="" class="tag-pill tag-default">angular</a>
+              <a href="" class="tag-pill tag-default">nodejs</a>
+              <a href="" class="tag-pill tag-default">webdevelopment</a>
+              <a href="" class="tag-pill tag-default">flutter</a>
+              <a href="" class="tag-pill tag-default">dart</a>
+              <a href="" class="tag-pill tag-default">cryto</a>
+            </div>
+          </div>
+          </div>
+        </div>
     </div>
   </div>
 </template>
