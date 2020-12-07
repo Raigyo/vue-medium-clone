@@ -55,9 +55,13 @@ export default {
                 class="form-control form-control-lg"
                 type="password"
                 placeholder="Password"
+                autocomplete="on"
               />
             </fieldset>
-            <button @click="login" class="btn btn-lg btn-secondary pull-xs-right">
+            <button
+              @click="login"
+              class="btn btn-lg btn-secondary pull-xs-right"
+            >
               Sign In
             </button>
           </form>

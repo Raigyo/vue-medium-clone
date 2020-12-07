@@ -1,3 +1,40 @@
+<script>
+import ArticlePreview from "../components/ArticlePreview";
+export default {
+  name: "Home",
+  components: {
+    ArticlePreview
+  },
+  data: function() {
+    return {
+      activeFeed: "global"
+    };
+  },
+  methods: {
+    setFeed(feedType) {
+      if (feedType === "global") {
+        this.activeFeed = "global";
+        this.$store.dispatch("articles/getGlobalFeed");
+      } else if (feedType === "user") {
+        this.activeFeed = "user";
+        this.$store.dispatch("articles/getUserFeed");
+      }
+    }
+  },
+  created() {
+    this.setFeed("global");
+  },
+  computed: {
+    globalArticles() {
+      return this.$store.state.articles.feed || [];
+    },
+    username() {
+      return this.$store.getters["users/username"];
+    }
+  }
+};
+</script>
+
 <template>
   <div class="home-page">
     <div class="banner">
@@ -21,7 +58,13 @@
             </ul>
           </div>
           <!-- articles preview -->
-          <div class="article-preview">
+          <ArticlePreview
+            v-for="article in globalArticles"
+            :key="article.slug"
+            :article="article"
+          ></ArticlePreview>
+          <!-- articles preview -->
+          <!-- <div class="article-preview">
             <div class="article-meta">
               <a href="profile.html"
                 ><img src="http://i.imgur.com/Qr71crq.jpg"
@@ -39,9 +82,9 @@
               <p>Learn about basics of React Native app development</p>
               <span>Read more...</span>
             </a>
-          </div>
+          </div> -->
           <!-- articles preview -->
-          <div class="article-preview">
+          <!-- <div class="article-preview">
             <div class="article-meta">
               <a href="profile.html"
                 ><img src="http://i.imgur.com/N4VcUeJ.jpg"
@@ -59,8 +102,7 @@
               <p>This is the description for the post.</p>
               <span>Read more...</span>
             </a>
-          </div>
-
+          </div> -->
         </div>
         <!-- Sidebar -->
         <div class="col-md-3">
@@ -80,8 +122,8 @@
               <a href="" class="tag-pill tag-default">cryto</a>
             </div>
           </div>
-          </div>
         </div>
+      </div>
     </div>
   </div>
 </template>
